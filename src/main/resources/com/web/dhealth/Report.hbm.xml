@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name="reportData" table="REPORTS">
+      <meta attribute="class-description">
+         This class contains the user's reports. 
+      </meta>
+      <id name="id" type="int" column="id">
+         <generator class="native"/>
+      </id>
+      <property name="pulse" column="pulse" type="int"/>
+      <property name="oxygenInBlood" column="oxygen_in_blood" type="int"/>
+      <property name="airFlow" column="air_flow" type="double"/>
+      <property name="conductance" column="conductance" type="double"/>
+      <property name="bodyPosition" column="body_position" type="string"/>
+      <property name="temperature" column="temperature" type="double"/>
+   </class>
+</hibernate-mapping>
